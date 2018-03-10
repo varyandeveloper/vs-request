@@ -1,0 +1,22 @@
+{
+  "name": "vs/request",
+  "description": "VarYan's Request package",
+  "homepage": "https://github.com/varyandeveloper/vs-request",
+  "type": "package",
+  "require": {
+    "php": "^7.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Varazdat Stepanyan",
+      "email": "developervaryan@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VS\\Request\\": "./src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
