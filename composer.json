@@ -4,7 +4,8 @@
   "homepage": "https://github.com/varyandeveloper/vs-request",
   "type": "package",
   "require": {
-    "php": "^7.2"
+    "php": "^7.2",
+    "vs/general": "dev-master"
   },
   "license": "MIT",
   "authors": [
