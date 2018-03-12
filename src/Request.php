@@ -93,10 +93,14 @@ class Request implements RequestInterface, SingletonInterface
     protected function fillFromWebKitFormBoundary(string $content, array &$inputArray)
     {
         preg_match_all("/form-data; name=(.*)\n(.*)\n(.*)/m", $content, $output);
-        array_filter($output[0], function ($value) use (&$inputArray) {
-            $value = preg_replace('/\s+/', '', $value);
-            $partials = explode('"', $value, 3);
-            $inputArray[$partials[1]] = $partials[2];
-        });
+        if (!empty($output[0])) {
+            array_filter($output[0], function ($value) use (&$inputArray) {
+                $value = preg_replace('/\s+/', '', $value);
+                $partials = explode('"', $value, 3);
+                if (!empty($partials[1]) && !empty($partials[2])) {
+                    $inputArray[$partials[1]] = $partials[2];
+                }
+            });
+        }
     }
 }
