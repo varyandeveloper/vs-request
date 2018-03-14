@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "606af45bc452f48f2a218968c22d6ed7",
-    "packages": [],
+    "content-hash": "122f9d2cb2fe15f6b460f604cac3eee6",
+    "packages": [
+        {
+            "name": "vs/general",
+            "version": "1.0.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/varyandeveloper/vs-general.git",
+                "reference": "54674fed292b56aac04357d7dccd9097a07d4aaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/varyandeveloper/vs-general/zipball/54674fed292b56aac04357d7dccd9097a07d4aaa",
+                "reference": "54674fed292b56aac04357d7dccd9097a07d4aaa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "VS\\General\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Varazdat Stepanyan",
+                    "email": "developervaryan@gmail.com"
+                }
+            ],
+            "description": "VarYan's General package",
+            "homepage": "https://github.com/varyandeveloper/vs-general",
+            "time": "2018-03-12T20:39:07+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
