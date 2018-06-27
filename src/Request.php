@@ -2,19 +2,13 @@
 
 namespace VS\Request;
 
-use VS\General\Singleton\{
-    SingletonInterface, SingletonTrait
-};
-
 /**
  * Class Request
  * @package VS\Request
  * @author Varazdat Stepanyan
  */
-class Request implements RequestInterface, SingletonInterface
+class Request implements RequestInterface
 {
-    use SingletonTrait;
-
     /**
      * @var array $_bindParams
      */
@@ -74,7 +68,9 @@ class Request implements RequestInterface, SingletonInterface
         } else {
             if ($content) {
                 $contentType = $_SERVER['CONTENT_TYPE'] ?? $_SERVER['HTTP_CONTENT_TYPE'];
-                if (in_array($contentType, ['application/json', 'application/javascript'])) {
+                if (strpos($contentType, 'application/json') !== false ||
+                    strpos($contentType, 'application/javascript') !== false
+                ) {
                     $inputArray = json_decode($content, true);
                 } else {
                     parse_str($content, $inputArray);
